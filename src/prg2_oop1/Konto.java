@@ -27,17 +27,22 @@ public class Konto {
         this.rate = rate;
     }
     
-    private void payIn(double wert) {
+    public void payIn(double wert) {
         
     }
     
-    private void payOut(double wert) {
+    public void payOut(double wert) {
         
     }
+    
+    public double getSaldo() {
+        return saldo;
+    }
 
-    private void print() {
+    public void print() {
         System.out.println("Number: " + no);
         System.out.println("Saldo: " + saldo);
-        System.out.println("Zinssatz: " + rate);   
+        System.out.println("Zinssatz: " + rate);
+        System.out.println();
     }
 }

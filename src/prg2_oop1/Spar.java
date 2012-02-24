@@ -30,5 +30,6 @@ public class Spar extends Konto {
         System.out.println("Saldo: " + saldo);
         System.out.println("Zinssatz: " + rate);
         System.out.println("Maximale Auszahlung: " + maxOut);
+        System.out.println();
     }
 }
