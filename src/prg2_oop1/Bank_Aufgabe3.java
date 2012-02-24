@@ -5,7 +5,7 @@
 package prg2_oop1;
 
 /**
- *
+ * Implementiert die Bank anhand der selbst entwickelten Klasse "LinkedList"
  * @author ramon
  */
 public class Bank_Aufgabe3 {
