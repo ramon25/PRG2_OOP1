@@ -17,14 +17,19 @@ public class Spar extends Konto {
         this.maxOut = maxOut;
     }
     
+    @Override
     public double getSaldo() {
         return this.saldo;
     }
     
+    @Override
     public void payOut(double wert) {
-        
+        if (wert <= maxOut) {
+            this.saldo -= wert;
+        }
     }
     
+    @Override
     public void print() {
         System.out.println("Number: " + no);
         System.out.println("Saldo: " + saldo);

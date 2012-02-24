@@ -18,7 +18,7 @@ public class Konto {
     
     public Konto() {
         count++;
-        no = count;
+        this.no = count;
     }
     
     public Konto (double saldo, double rate) {
@@ -28,15 +28,15 @@ public class Konto {
     }
     
     public void payIn(double wert) {
-        
+        this.saldo += wert;
     }
     
     public void payOut(double wert) {
-        
+        this.saldo -= wert;
     }
     
     public double getSaldo() {
-        return saldo;
+        return this.saldo;
     }
 
     public void print() {
