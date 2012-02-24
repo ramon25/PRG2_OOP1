@@ -11,11 +11,33 @@ package prg2_oop1;
  */
 public class Konto {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private static int count = 0;
+    protected int no;
+    protected double saldo;
+    protected double rate;
+    
+    public Konto() {
+        count++;
+        no = count;
+    }
+    
+    public Konto (double saldo, double rate) {
+        this();
+        this.saldo = saldo;
+        this.rate = rate;
+    }
+    
+    private void payIn(double wert) {
+        
+    }
+    
+    private void payOut(double wert) {
+        
     }
 
+    private void print() {
+        System.out.println("Number: " + no);
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Zinssatz: " + rate);   
+    }
 }
