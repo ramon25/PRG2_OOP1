@@ -42,7 +42,15 @@ public class LinkedList {
     }
     
     public int length() {
-        return 3;
+        int count = 0;
+        ListNode actualNode = head;
+
+        while (actualNode != null) {
+            count++;
+            actualNode = actualNode.getNext();
+        }
+        
+        return count;
     }
     
     public ListNode getHead() {
