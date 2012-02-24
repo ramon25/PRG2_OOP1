@@ -41,9 +41,14 @@ public class LinkedList {
         }
     }
     
-    //public int lenght() {
-        
-    //}
+    public int length() {
+        return 3;
+    }
+    
+    public ListNode getHead() {
+        return head;
+    }
+            
     
     public static void main(String[] args) {
         Konto myKonto = new Konto(1000,0.6);

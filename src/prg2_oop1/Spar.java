@@ -12,8 +12,7 @@ public class Spar extends Konto {
     private double maxOut;
     
     public Spar (double saldo, double rate, double maxOut) {
-        this.saldo = saldo;
-        this.rate = rate;
+        super(saldo, rate);
         this.maxOut = maxOut;
     }
     

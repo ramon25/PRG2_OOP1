@@ -4,63 +4,62 @@
  */
 package prg2_oop1;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 /**
  *
  * @author ramon
  */
-public class Bank {
+public class Bank_Aufgabe3 {
     private String name;
-    ArrayList<Konto> accountList = new ArrayList<Konto>();
+    LinkedList accountList = new LinkedList();
     
-    public Bank(String name) {
+    public Bank_Aufgabe3(String name) {
         this.name = name;
     }
     
     public void openKonto(double saldo, double rate) {
         Konto myKonto = new Konto(saldo, rate);
-        accountList.add(myKonto);
+        accountList.insert(myKonto);
     }
     
     public void openSpar(double saldo, double rate, double maxOut) {
         Spar mySpar = new Spar(saldo, rate, maxOut);
-        accountList.add(mySpar);  
+        accountList.insert(mySpar);  
     }
     
     public void openGiro(double saldo, double creditLimit) {
         Giro myGiro = new Giro(saldo, creditLimit);
-        accountList.add(myGiro);
+        accountList.insert(myGiro);
     }
     
     private int noOfAccounts() {
-        return accountList.size();
+        return accountList.length();
     }
     
     private void printAccounts() {
-        Iterator it = accountList.iterator();
+        ListNode myNode = accountList.getHead();
         
-        while (it.hasNext()) {
-            Konto myKonto = (Konto)it.next();
-            myKonto.print();   
-        }
+        do {
+            Konto myKonto = myNode.getKonto();
+            myKonto.print();
+            myNode = myNode.getNext();
+        } while (myNode != null);
     }
     
     private void printFund() {
         double fund = 0;
-        Iterator  it = accountList.iterator();
+        ListNode myNode = accountList.getHead();
         
-        while (it.hasNext()) {
-            Konto myKonto = (Konto)it.next();
+        do {
+            Konto myKonto = myNode.getKonto();
             fund += myKonto.getSaldo();
-        }
+            myNode = myNode.getNext();
+        } while (myNode != null);
         
         System.out.println("Vermoegen: " + fund);
     }
     
     public static void main(String[] args) {
-        Bank myBank = new Bank("myBank");
+        Bank_Aufgabe3 myBank = new Bank_Aufgabe3("myBank");
         myBank.openKonto(500, 0.5);
         myBank.openSpar(100, 0.4, 2000);
         myBank.openGiro(20000, 100000);
