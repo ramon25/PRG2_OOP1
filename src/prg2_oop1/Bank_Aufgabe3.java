@@ -36,24 +36,24 @@ public class Bank_Aufgabe3 {
     }
     
     private void printAccounts() {
-        ListNode myNode = accountList.getHead();
+        ListNode<Konto> myNode = accountList.getHead();
         
-        do {
+        while (myNode != null) {
             Konto myKonto = myNode.getKonto();
             myKonto.print();
             myNode = myNode.getNext();
-        } while (myNode != null);
+        }
     }
     
     private void printFund() {
         double fund = 0;
-        ListNode myNode = accountList.getHead();
+        ListNode<Konto> myNode = accountList.getHead();
         
-        do {
+        while (myNode != null) {
             Konto myKonto = myNode.getKonto();
             fund += myKonto.getSaldo();
             myNode = myNode.getNext();
-        } while (myNode != null);
+        } 
         
         System.out.println("Vermoegen: " + fund);
     }

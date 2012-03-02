@@ -8,20 +8,20 @@ package prg2_oop1;
  *
  * @author ramon
  */
-public class ListNode {
-    private Konto konto;
+public class ListNode<T> {
+    private T konto;
     private ListNode next;
     
-    public ListNode(Konto konto, ListNode next) {
+    public ListNode(T konto, ListNode next) {
         this.konto = konto;
         this.next = next;
     }
     
-    public Konto getKonto() {
+    public T getKonto() {
         return konto;
     }
 
-    public void setKonto(Konto konto) {
+    public void setKonto(T konto) {
         this.konto = konto;
     }
 

@@ -17,11 +17,6 @@ public class Spar extends Konto {
     }
     
     @Override
-    public double getSaldo() {
-        return this.saldo;
-    }
-    
-    @Override
     public void payOut(double wert) {
         if (wert <= maxOut) {
             this.saldo -= wert;

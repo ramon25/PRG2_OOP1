@@ -43,7 +43,7 @@ public class Bank {
         
         while (it.hasNext()) {
             Konto myKonto = (Konto)it.next();
-            myKonto.print();   
+            myKonto.print(); 
         }
     }
     

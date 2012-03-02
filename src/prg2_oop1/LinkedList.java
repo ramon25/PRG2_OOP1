@@ -9,7 +9,7 @@ package prg2_oop1;
  * @author ramon
  */
 public class LinkedList {
-    private ListNode head;
+    private ListNode<Konto> head;
     
     public LinkedList() {
         head = null;
@@ -33,7 +33,7 @@ public class LinkedList {
     }
     
     public void print() {
-        ListNode actualNode = head;
+        ListNode<Konto> actualNode = head;
         System.out.println("--------------");
         while (actualNode != null) {
             actualNode.getKonto().print();
